@@ -8,7 +8,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('img/Lena.png')
+img = cv2.imread('../img/lena_noise.png')
 
 #平滑线性滤波
 img_mean = cv2.blur(img, ksize=(5, 5))

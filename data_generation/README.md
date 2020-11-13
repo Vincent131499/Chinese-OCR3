@@ -2,7 +2,7 @@
 
 基于深度学习的OCR系统一般分为文字检测和文字识别两个阶段，数据生成也需要针对这两个阶段分别叙述并辅以实战进行演示。
 
-**本项目完整代码：http://github.com/xxx**
+**本项目完整代码：https://github.com/Vincent131499/Chinese-OCR3/tree/master/data_generation**
 
 ## 1.文字检测数据的生成
 
@@ -30,7 +30,7 @@ step2：根据深度信息进行二次过滤，筛选出比较平整的区域。
 
 ### 1.2 实战演示
 
-该项目位于Chinese-OCR3/data_generation/synthText目录下。
+该项目位于Chinese-OCR3/data_generation/SynthText目录下。
 
 **一般而言：开源的数据集已经足够用于文字检测项目，所以生成更多应用在文字识别阶段，这里只是作为演示使用。**
 

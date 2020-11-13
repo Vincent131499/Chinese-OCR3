@@ -63,7 +63,7 @@ python visualize_results.py
 
 以下放出一张示例的生成图片：
 
-![image-20201110152151504](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201110152151504.png)
+![image-20201110152151504](https://s3.ax1x.com/2020/11/13/DS4958.png)
 
 
 
@@ -73,7 +73,7 @@ python visualize_results.py
 
 在实际的业务场景中，首先需要根据具体的业务分析需要的背景、字体、颜色、形变以及语料等信息。具体识别数据的生成流程如下所示：
 
-![识别数据生成流程图](F:\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\绘图\识别数据生成流程图.jpg)
+![识别数据生成流程图](https://s3.ax1x.com/2020/11/13/DSh5Hx.jpg)
 
 目前常用流行的识别数据生成方法可大致分为三类：GAN生成法、基于特征变换的图像增强、基于深度学习的图像增强。
 
@@ -90,7 +90,7 @@ python visualize_results.py
 
 直到二者收敛，此时生成模型和判别模型都能达到比较好的效果。上述的博弈类似《射雕英雄传》中周伯通的左右互搏术，能循环提升生成模型和判别模型的能力。另外，在生成模型中采用神经网络作为主干/backbone，则称之为生成对抗网络。GAN模型结构如下图所示。
 
-![GAN模型结构](F:\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\绘图\GAN模型结构.jpg)
+![GAN模型结构](https://s3.ax1x.com/2020/11/13/DShoE6.jpg)
 
 在这里以改进的**pix2pix**经典模型为例进行实战演示。
 
@@ -118,9 +118,9 @@ python test.py --dataroot ./datasets/facades/ --direction BtoA --model pix2pix -
 
 生成图片如下示例：
 
-![pix2pix_demo1](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\绘图\pix2pix_demo1.png)
+![pix2pix_demo1](https://s3.ax1x.com/2020/11/13/DSh74O.png)
 
-![pix2pix_demo2](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\绘图\pix2pix_demo2.png)
+![pix2pix_demo2](https://s3.ax1x.com/2020/11/13/DShbCD.png)
 
 ### 2.2 基于特征变换的图像增强
 
@@ -135,7 +135,7 @@ python test.py --dataroot ./datasets/facades/ --direction BtoA --model pix2pix -
 
 输入图片：
 
-![sample](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\augment\sample.png)
+![sample](https://s3.ax1x.com/2020/11/13/DS48M9.png)
 
 核心代码如下：
 
@@ -204,27 +204,27 @@ def blur(img, typ="gaussian", kernal=(2, 2)):
 
 旋转-倾斜一定角度：
 
-![roated_img](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\augment\roated_img.png)
+![roated_img](https://s3.ax1x.com/2020/11/13/DS4wGD.png)
 
 拉伸-放大：
 
-![resized_long_img](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\augment\resized_long_img.png)
+![resized_long_img](https://s3.ax1x.com/2020/11/13/DS4dPO.png)
 
 拉伸-缩小：
 
-![resized_short_img](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\augment\resized_short_img.png)
+![resized_short_img](https://s3.ax1x.com/2020/11/13/DS4UIK.png)
 
 对比度-增强：
 
-![incre_contrasted](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\augment\incre_contrasted.png)
+![incre_contrasted](https://s3.ax1x.com/2020/11/13/DS4Jq1.png)
 
 对比度-降低：
 
-![decre_contrasted](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\augment\decre_contrasted.png)
+![decre_contrasted](https://s3.ax1x.com/2020/11/13/DS4GrR.png)
 
 模糊：
 
-![blured](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\data_generation\augment\blured.png)
+![blured](https://s3.ax1x.com/2020/11/13/DS4tVx.png)
 
 ### 2.3 基于深度学习的图像增强
 
@@ -247,6 +247,4 @@ def blur(img, typ="gaussian", kernal=(2, 2)):
 1）Imgaug：https://github.com/aleju/imgaug   主要用于物体检测的增强。
 
 2）Augmentor：https://github.com/mdbloice/Augmentor  做一些更复杂的仿射扭曲变换。
-
-
 

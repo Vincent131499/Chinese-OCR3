@@ -1,8 +1,14 @@
 # OCR深度实践系列：文本检测
 
+**OCR深度实践系列：**
+
+**（一）图像预处理**
+
+**（二）数据生成**
+
 目前OCR的研究集中在自然场景文本理解这一领域，其应用包括安全智能监控如车牌识别、智能穿戴设备应用如智能阅读、手机拍摄应用如关键字提取和智能搜索以及身份证/银行卡的关键信息识别。
 
-本文主要介绍OCR的关键环节-文本检测，首先列出传统方法和深度学习方法，随后介绍深度学习的两种典型网络CTPN和CRAFT，最后给出这两种网络的实战演示。
+本文是OCR深度实践系列的**第三篇**，主要介绍OCR的关键环节-文本检测，首先列出传统方法和深度学习方法，随后介绍深度学习的两种典型网络CTPN和CRAFT，最后给出这两种网络的实战演示。
 
 **本文项目地址：https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_detection**
 
@@ -28,7 +34,7 @@
 
 针对基于回归的文本检测方法，其基本思路是先利用若干个Default Boxes（也称Anchor）产生大量的候选文本框，直接进行NMS后处理或者进一步精调再进行NMS后处理得到最终的检测结果。此处重点介绍CTPN网络模型，模型架构如下所示。
 
-![](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\CTPN模型架构.jpg)
+![CTPN-model](https://s3.ax1x.com/2020/11/18/DmxFjP.jpg)
 
 具体包括7个步骤：
 
@@ -54,7 +60,7 @@
 
 对于基于图像分割的文本检测，其基本思路是通过分割网络结构进行像素级别的语义分割，进而基于分割的结果构建文本行。此处重点介绍CRAFT网络模型，模型架构如下图所示。
 
-![CRAFT模型架构](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\CRAFT模型架构.jpg)
+![CRAFT模型架构](https://s3.ax1x.com/2020/11/18/DmxEB8.png)
 
 大多文本检测方法使用严格的word-level边界框进行训练，在表示任意形状的文本区域时会有所限制，而CRAFT则改进了这一点。CRAFT的网络结构如图。看起来并不复杂，基于VGG16的结构，整体类似UNet，是一个标准的分割模型，最终的输出有两个通道作为score map：Region Score 和 Affinity Score。Region Score表示该像素点是文字中心的概率，Affinity Score可以认为是该像素点是两个字符之间的中心的概率。这个结构还是比较简单的，其实大部分基于分割的模型网络结构都比较简单，主要是后处理与训练数据。
 
@@ -62,7 +68,7 @@
 
 CRAFT的训练数据label不是二值化的图像，而是采用了类似热力图的图像，这也对应了上面说的，表示的是该位置在文字中心的概率。
 
-![CRAFT-训练数据生成](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\CRAFT-训练数据生成.png)
+![CRAFT-训练数据生成](https://s3.ax1x.com/2020/11/18/DmxeAg.png)
 
 上图是训练数据的label的生成示意图。首先看左边，有了一个字符级的标注（第二个图的红框， Character Boxes），这个字符的四个点（第一个图绿边）构成一个四边形，做对角线，构成两个三角形（第一个图蓝边），取三角形的中心，两个框之间就有四个点，构成了一个新的边框，这个边框就是用来表示两个字符之间的连接的label的（Affinity Boxes）。第三个图是根据Box生成Label的过程，先生成一个2D的高斯图，通过透视变换，映射成与box相同的形状，最后粘到对应的背景上。
 
@@ -70,13 +76,13 @@ CRAFT的训练数据label不是二值化的图像，而是采用了类似热力�
 
 在网络输出score map之后，下面就要把这些像素级的label合成box，这篇论文里用的方法并不复杂，首先是通过阈值过滤score map，进行二值化，然后接一个连通域分析（Connected Component Labeling ），接下来通过连通域画出最终的QuadBox，可以看一下它的示意图：
 
-![CRAFT-后处理](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\CRAFT-后处理.png)
+![CRAFT-后处理](https://s3.ax1x.com/2020/11/18/DmxmNQ.png)
 
 ## 3.实战
 
 本文以上面提及的CTPN和CRAFT为例针对输入图片进行文本检测。输入图片为：
 
-![](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\symbol.jpg)
+![symbol](https://s3.ax1x.com/2020/11/18/DmxVHS.jpg)
 
 ### 3.1 CTPN演示
 
@@ -104,7 +110,7 @@ python ./main/demo.py
 
 生成效果如下：
 
-![ctpn_demo](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\ctpn_demo.jpg)
+![ctpn_demo](https://s3.ax1x.com/2020/11/18/DmxAnf.jpg)
 
 ### 3.2 CRAFT演示
 
@@ -126,13 +132,13 @@ step4：检测的结果将保存在result文件夹中供查看。
 
 生成效果如下：
 
-![craft_demo](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\craft_demo.jpg)
+![craft_demo](https://s3.ax1x.com/2020/11/18/DmxK9s.jpg)
 
 **方式2：基于预训练模型在自己的数据集上继续训练，迁移学习**
 
 step1：标注自己的数据集，使用标注工具**labelme**:，我们进行字符级别的标注，即对每个字符顺时针标注4个点构成一个多边形框，如下图所示：
 
-![标注](E:\my_code\算法平台研发\OCR组件研发\基于深度学习的文字识别教程\chinese-ocr3-back\text_detection\imgs\标注.png)
+![craft标注](https://s3.ax1x.com/2020/11/18/Dmxlj0.png)
 
 然后我们给这个多边形框标注对应的字符，方便之后如果要做文本识别时使用。 
 
@@ -157,4 +163,3 @@ step5：使用训练好的模型进行文本检测
 ```bash
 python test.py --trained_model ./models/5.pth
 ```
-

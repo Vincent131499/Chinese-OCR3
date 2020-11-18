@@ -151,10 +151,10 @@ python file_construct.py
 ```
 
 - 如下所示： 
-  data：  affinity：blw_affinity_1.npy 
-  anno：blw_1.json 
-  img：blw_1.jpg 
-  region：blw_region_1.npy 
+  data：  affinity：blw_affinity_1.npy<br> 
+  anno：blw_1.json <br> 
+  img：blw_1.jpg <br> 
+  region：blw_region_1.npy <br> 
 
  step4：此时我们自己的数据集就准备好了。 运行train.py(注意修改main函数中的参数设置)，训练好的模型默认存放在./models中。 
 

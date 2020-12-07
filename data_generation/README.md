@@ -1,4 +1,5 @@
 # 基于深度学习的OCR数据生成
+**（一）[图像预处理](https://github.com/Vincent131499/Chinese-OCR3/tree/master/preprocess)**
 
 基于深度学习的OCR系统一般分为文字检测和文字识别两个阶段，数据生成也需要针对这两个阶段分别叙述并辅以实战进行演示。
 

@@ -2,9 +2,9 @@
 
 **OCR深度实践系列：**
 
-**（一）图像预处理**
+**（一）[图像预处理](https://github.com/Vincent131499/Chinese-OCR3/tree/master/preprocess)**
 
-**（二）数据生成**
+**（二）[数据生成](https://github.com/Vincent131499/Chinese-OCR3/tree/master/data_generation)**
 
 目前OCR的研究集中在自然场景文本理解这一领域，其应用包括安全智能监控如车牌识别、智能穿戴设备应用如智能阅读、手机拍摄应用如关键字提取和智能搜索以及身份证/银行卡的关键信息识别。
 

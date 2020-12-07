@@ -2,11 +2,11 @@
 
 **OCR深度实践系列：**
 
-**（一）[图像预处理](http://mp.weixin.qq.com/s?__biz=MzI5MjYzNzAyMw==&mid=2247484153&idx=1&sn=b65e9e99047ae20ed44cd99e4b0ff2e0&chksm=ec7f12c9db089bdf84281eaa54dad96679fa15b4c915d739597a57885625bc9a1fef15b8b52e&scene=21#wechat_redirect)**
+**（一）[图像预处理](https://github.com/Vincent131499/Chinese-OCR3/tree/master/preprocess)**
 
-**（二）[数据生成](http://mp.weixin.qq.com/s?__biz=MzI5MjYzNzAyMw==&mid=2247484187&idx=1&sn=549b68ec989792ad5e2fb9179af55598&chksm=ec7f132bdb089a3d2f96ebecc780a6e756cdf26cb4e8a5bc4951c029e0c4dfb83c40cdc927ff&scene=21#wechat_redirect)**
+**（二）[数据生成](https://github.com/Vincent131499/Chinese-OCR3/tree/master/data_generation)**
 
-**（三）文本检测**
+**（三）[文本检测](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_detection)**
 
 最近在攻关法律领域的类案检索系统，这几天正好忙完了，得空继续写《OCR深度实践系列》这一专题的文章。前面三章依次介绍了图像预处理、数据生成以及文本检测三个模块，本章将介绍第四个关键模块：文本识别。
 

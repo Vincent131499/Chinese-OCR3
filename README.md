@@ -4,7 +4,7 @@
 本文将针对OCR从**理论**和**实战**两方面进行详细论述，当然，不会涉及过多的公式，网上对于公式解析已经很全面，若感兴趣可自行查找。
 
 **目前已更新系列章节：<br>**
-**（一）[OCR深度实践系列：图像预处理](https://github.com/Vincent131499/Chinese-OCR3/tree/master/preprocess)<br>**
-**（二）[OCR深度实践系列：数据生成](https://github.com/Vincent131499/Chinese-OCR3/tree/master/data_generation)<br>**
-**（三）[OCR深度实践系列：文本检测](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_detection)<br>**
-**（四）[OCR深度实践系列：文本识别](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_recognize)<br>**
+**[（一）OCR深度实践系列：图像预处理](https://github.com/Vincent131499/Chinese-OCR3/tree/master/preprocess)<br>**
+**[（二）OCR深度实践系列：数据生成](https://github.com/Vincent131499/Chinese-OCR3/tree/master/data_generation)<br>**
+**[（三）OCR深度实践系列：文本检测](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_detection)<br>**
+**[（四）OCR深度实践系列：文本识别](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_recognize)<br>**

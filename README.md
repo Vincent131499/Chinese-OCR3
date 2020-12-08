@@ -8,3 +8,10 @@
 **[（二）OCR深度实践系列：数据生成](https://github.com/Vincent131499/Chinese-OCR3/tree/master/data_generation)<br>**
 **[（三）OCR深度实践系列：文本检测](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_detection)<br>**
 **[（四）OCR深度实践系列：文本识别](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_recognize)<br>**
+
+**Python环境配置<br>**
+本项目下的所有模型均在以下环境中测试：
+python版本：python3.6<br>
+系统：ubuntu18.04<br>
+pytorch：1.2.0<br>
+tensorflow：1.14.0<br>

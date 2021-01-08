@@ -10,9 +10,9 @@ python版本：python3.6<br>
 pytorch：1.2.0<br>
 tensorflow：1.14.0<br>
 
-## 目前已更新系列章节：
+## 目前章节系列已更新完毕：
 **[（一）OCR深度实践系列：图像预处理](https://github.com/Vincent131499/Chinese-OCR3/tree/master/preprocess)<br>**
 **[（二）OCR深度实践系列：数据生成](https://github.com/Vincent131499/Chinese-OCR3/tree/master/data_generation)<br>**
 **[（三）OCR深度实践系列：文本检测](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_detection)<br>**
 **[（四）OCR深度实践系列：文本识别](https://github.com/Vincent131499/Chinese-OCR3/tree/master/text_recognize)<br>**
-
+**[（五）OCR深度实践系列：后处理篇](https://github.com/Vincent131499/Chinese-OCR3/tree/master/post_process)<br>**
